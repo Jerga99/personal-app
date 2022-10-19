@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FunctionComponent } from "react";
+import { Blog } from "../../../interfaces/Blog";
 
-export const BlogItem = ({blog}: any) => {
+type Props = {
+  blog: Blog
+}
+
+export const BlogItem: FunctionComponent<Props> = ({blog}) => {
 
   return (
     <div className="group">

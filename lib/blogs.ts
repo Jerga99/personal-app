@@ -11,6 +11,7 @@ const getBlogFileNames = () => {
 
 const getBlog = (fileName: string): Blog => {
   const blog = getItemInPath(join(BLOG_DIR, fileName)) as Blog;
+  blog.slug = fileName.replace(/\.md$/, "");
   return blog;
 }
 
