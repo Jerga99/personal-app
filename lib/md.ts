@@ -28,7 +28,18 @@ const getBlog = (fileName: string): Blog => {
   return blog;
 }
 
+const getAllItems = (fileNames: string[]) => {
+  const items = fileNames.map((name) => getBlog(name));
+  return items;
+}
+
+const getBlogs = (): Blog[] => {
+  const names = getBlogFileNames();
+  return getAllItems(names);
+}
+
 export {
   getBlogFileNames,
-  getBlog
+  getBlog,
+  getBlogs
 }
