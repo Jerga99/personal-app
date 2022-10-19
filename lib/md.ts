@@ -1,6 +1,7 @@
 
 import { join } from "path";
 import fs from "fs";
+import { Blog } from "../interfaces/Blog";
 
 const getDir = (path: string) => join(process.cwd(), path);
 
