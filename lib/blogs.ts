@@ -9,10 +9,19 @@ const getBlogFileNames = () => {
   return getFileNames(BLOG_DIR);
 }
 
+const getBlogsSlugs = () => {
+  return getBlogFileNames().map(fileName => fileName.replace(/\.md$/, ""));
+}
+
 const getBlog = (fileName: string): Blog => {
   const blog = getItemInPath(join(BLOG_DIR, fileName)) as Blog;
   blog.slug = fileName.replace(/\.md$/, "");
   return blog;
+}
+
+const getBlogBySlug = (slug: string) => {
+  const fileName = slug + ".md";
+  return getBlog(fileName);
 }
 
 const getBlogs = (): Blog[] => {
@@ -23,5 +32,7 @@ const getBlogs = (): Blog[] => {
 export {
   getBlogFileNames,
   getBlog,
-  getBlogs
+  getBlogs,
+  getBlogsSlugs,
+  getBlogBySlug
 }
