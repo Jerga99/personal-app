@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "markdown-full-example",
+    "title": "Markdown Extensive Example UPDATED",
+    "description": "Learn how to write markdown",
+    "category": "blogs"
+  },
+  {
+    "slug": "nft-marketplace-in-react-js-next-typescript-full-guide",
+    "title": "NFT Marketplace in React, Typescript & Solidity - Full Guide",
+    "description": "Learn how to use React / Next JS, Solidity, and Pinata(IPFS) to create NFT marketplace on Ethereum. All In Typescript.",
+    "category": "blogs"
+  },
+  {
+    "slug": "rust-webassembly-with-js-ts-the-practical-guide",
+    "title": "Rust & WebAssembly with JS (TS) - The Practical Guide",
+    "description": "Learn how to code in Rust! Compile the code to WebAssembly, prepare JS/TS frontend and finish the course by creating the practical Snake game that can run in any browser.",
+    "category": "blogs"
+  },
+  {
+    "slug": "software-engineer-siemens",
+    "title": "Software Engineer Siemens",
+    "description": "Working as C++, C# and Rust software engineer",
+    "category": "portfolios"
+  }
+]
