@@ -1,6 +1,29 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid"
+import searchIndex from "@content/search/index.json";
+import * as JsSearch from "js-search";
+import { useEffect } from "react";
 
 const ContentSearch = () => {  
+
+  const buildIndex = () => {
+    const searchEngine = new JsSearch.Search("slug");
+
+    searchEngine.addIndex("title");
+    searchEngine.addIndex("description");
+
+    searchEngine.addDocuments(searchIndex);
+
+    const results1 = searchEngine.search("nft marketplace");
+    const results2 = searchEngine.search("Practical");
+    const results3 = searchEngine.search("mark");
+    const results4 = searchEngine.search("Siemens");
+    const results5 = searchEngine.search("notexisting value");
+  }
+
+  useEffect(() => {
+    buildIndex();
+  }, [])
+
   return (
     <>
       <label htmlFor="search" className="sr-only">
