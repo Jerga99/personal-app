@@ -1,13 +1,15 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid"
+import { SearchContent } from "@interfaces/Markdown";
 import contentIndexer from "@lib/client/ContentIndexer";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 
 const ContentSearch = () => {  
+  const [results, setResults] = useState<SearchContent[]>([]);
 
   const performSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const {value} = event.target;
     const results = contentIndexer.search(value);
-    console.log(results);
+    setResults(results);
   }
 
   return (
