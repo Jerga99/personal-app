@@ -1,9 +1,10 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid"
 import { SearchContent } from "@interfaces/Markdown";
 import contentIndexer from "@lib/client/ContentIndexer";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 const ContentSearch = () => {  
+  const ref = useRef<HTMLInputElement>(null);
   const [results, setResults] = useState<SearchContent[]>([]);
 
   const handleClickOutside = () => {
@@ -11,8 +12,12 @@ const ContentSearch = () => {
   }
 
   useEffect(() => {
-    const callback = () => {
-      if (results.length > 0) {
+    const callback = (event: MouseEvent) => {
+      if (
+        results.length > 0 && 
+        ref.current && 
+        !ref.current.contains(event.target as Node)) 
+      {
         handleClickOutside();
       }
     }
@@ -40,6 +45,7 @@ const ContentSearch = () => {
           <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
         </div>
         <input
+          ref={ref}
           id="search-input"
           onChange={performSearch}
           autoComplete="off"
