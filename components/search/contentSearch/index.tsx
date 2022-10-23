@@ -6,9 +6,11 @@ import { ChangeEvent, useEffect, useRef, useState } from "react";
 const ContentSearch = () => {  
   const ref = useRef<HTMLInputElement>(null);
   const [results, setResults] = useState<SearchContent[]>([]);
+  const [query, setQuery] = useState("");
 
   const handleClickOutside = () => {
-    alert("Click Outside!");
+    setResults([]);
+    setQuery("");
   }
 
   useEffect(() => {
@@ -33,6 +35,7 @@ const ContentSearch = () => {
     const {value} = event.target;
     const results = contentIndexer.search(value);
     setResults(results);
+    setQuery(value);
   }
 
   return (
@@ -46,6 +49,7 @@ const ContentSearch = () => {
         </div>
         <input
           ref={ref}
+          value={query}
           id="search-input"
           onChange={performSearch}
           autoComplete="off"
