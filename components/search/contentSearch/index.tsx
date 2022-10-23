@@ -24,10 +24,18 @@ const ContentSearch = () => {
       }
     }
 
+    const escapeKeyCallback = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && results.length > 0) {
+        handleClickOutside();
+      }
+    }
+
     document.addEventListener("click", callback);
+    document.addEventListener("keydown", escapeKeyCallback);
 
     return () => {
       document.removeEventListener("click", callback);
+      document.removeEventListener("keydown", escapeKeyCallback);
     }
   }, [results.length])
 
