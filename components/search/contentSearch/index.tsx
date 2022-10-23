@@ -11,12 +11,18 @@ const ContentSearch = () => {
   }
 
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
+    const callback = () => {
+      if (results.length > 0) {
+        handleClickOutside();
+      }
+    }
+
+    document.addEventListener("click", callback);
 
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", callback);
     }
-  }, [])
+  }, [results.length])
 
   const performSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const {value} = event.target;
