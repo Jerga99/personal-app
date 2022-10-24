@@ -5,6 +5,9 @@ import { PortfolioList } from '@components/portfolios';
 import { BaseLayout } from '@components/layouts';
 import { getBlogs } from '@lib/blogs';
 import { Blog } from '@interfaces/Blog';
+import { getDir } from '@lib/md';
+import { SearchContent } from '@interfaces/Markdown';
+import fs from "fs";
 
 type Props = {
   blogs: Blog[]
@@ -40,6 +43,22 @@ const Home: NextPage<Props> = ({blogs}) => {
 
 export const getStaticProps: GetStaticProps = () => {
   const blogs = getBlogs();
+
+  const searchFile = getDir("/content/search/index.json");
+  const searchItemList: SearchContent[] = [];
+
+  blogs.forEach((blog) => {
+    const searchItem: SearchContent = {
+      slug: blog.slug,
+      title: blog.title,
+      description: blog.description,
+      category: "blogs"
+    };
+
+    searchItemList.push(searchItem);
+  });
+
+  fs.writeFileSync(searchFile, JSON.stringify(searchItemList, null, 2));
   
   return {
     props: {blogs}

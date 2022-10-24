@@ -18,9 +18,15 @@
     "category": "blogs"
   },
   {
-    "slug": "software-engineer-siemens",
-    "title": "Software Engineer Siemens",
-    "description": "Working as C++, C# and Rust software engineer",
-    "category": "portfolios"
+    "slug": "unity-2d-with-c-complete-game-dev-course",
+    "title": "Unity 2D With C# - Complete Game Dev Course",
+    "description": "Create the complete 2D survival game in Unity with C#. Learn best practices and patterns.",
+    "category": "blogs"
+  },
+  {
+    "slug": "web-development-and-coding-full-course",
+    "title": "Web Development & Code 101 - Full Guide [2022]",
+    "description": "Learn programming in JS language, HTML, and CSS. Create a Web Application made in React JS. The path to the final project includes many assignments, code exercises, and challenges.",
+    "category": "blogs"
   }
 ]
