@@ -1,8 +1,14 @@
 
+import { Portfolio } from "@interfaces/Portfolio";
 import Image from "next/image";
 import Link from "next/link";
+import { FunctionComponent } from "react";
 
-export const PortfolioItem = ({portfolio}: any) => {
+type Props = {
+  portfolio: Portfolio
+}
+
+export const PortfolioItem: FunctionComponent<Props> = ({portfolio}) => {
 
   return (
     <div className="group relative">
