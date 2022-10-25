@@ -24,7 +24,9 @@ const getAllItems = (
   fileNames: string[],
   get: (name: string) => MarkdownItem
 ) => {
-  const items = fileNames.map((name) => get(name));
+  const items = fileNames
+    .map((name) => get(name))
+    .sort((item1, item2) => (item1.date > item2.date ? -1 : 1));
   return items;
 }
 

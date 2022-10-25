@@ -1,14 +1,20 @@
 [
   {
-    "slug": "markdown-full-example",
-    "title": "Markdown Extensive Example UPDATED",
-    "description": "Learn how to write markdown",
+    "slug": "web-development-and-coding-full-course",
+    "title": "Web Development & Code 101 - Full Guide [2022]",
+    "description": "Learn programming in JS language, HTML, and CSS. Create a Web Application made in React JS. The path to the final project includes many assignments, code exercises, and challenges.",
     "category": "blogs"
   },
   {
     "slug": "nft-marketplace-in-react-js-next-typescript-full-guide",
     "title": "NFT Marketplace in React, Typescript & Solidity - Full Guide",
     "description": "Learn how to use React / Next JS, Solidity, and Pinata(IPFS) to create NFT marketplace on Ethereum. All In Typescript.",
+    "category": "blogs"
+  },
+  {
+    "slug": "markdown-full-example",
+    "title": "Markdown Extensive Example UPDATED",
+    "description": "Learn how to write markdown",
     "category": "blogs"
   },
   {
@@ -21,12 +27,6 @@
     "slug": "unity-2d-with-c-complete-game-dev-course",
     "title": "Unity 2D With C# - Complete Game Dev Course",
     "description": "Create the complete 2D survival game in Unity with C#. Learn best practices and patterns.",
-    "category": "blogs"
-  },
-  {
-    "slug": "web-development-and-coding-full-course",
-    "title": "Web Development & Code 101 - Full Guide [2022]",
-    "description": "Learn programming in JS language, HTML, and CSS. Create a Web Application made in React JS. The path to the final project includes many assignments, code exercises, and challenges.",
     "category": "blogs"
   },
   {
