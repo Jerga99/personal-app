@@ -4,7 +4,7 @@ description: Learn how to use React / Next JS, Solidity, and Pinata(IPFS) to cre
 author: Filip Jerga
 authorImage: https://thrangra.sirv.com/Ethereum_blue_light-small.jpg
 coverImage: https://thrangra.sirv.com/Ethereum_blue_light-small.jpg
-date: "2022-04-25"
+date: "2022-06-25"
 ---
 
 Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, etc. No config is necessary.

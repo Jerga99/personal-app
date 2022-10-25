@@ -5,4 +5,12 @@ const getLocalSearchIndex = () => {
   return searchIndex;
 }
 
-export { getLocalSearchIndex }
+const shortify = (text: string, maxLength = 70) => {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  return text.substring(0, maxLength) + " ...";
+}
+
+export { getLocalSearchIndex, shortify }
