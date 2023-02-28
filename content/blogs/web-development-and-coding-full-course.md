@@ -9,6 +9,12 @@ date: "2022-12-12"
 
 **What is Javascript?**
 
+```js
+  function hiThere() {
+    console.log("Hi There!");
+  }
+```
+
 JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.
 
 **What are you going to work on?**
@@ -16,6 +22,12 @@ JavaScript is a scripting or programming language that allows you to implement c
 In this course, we will cover six big topic groups. Every section contains a lot of assignments and code exercises.
 
 The final project is a web application to display products for users to buy. For the entire course length, you will work on one application. We will start simple with console application and finish with React JS, an excellent styled application.
+
+```js
+  function hiThere() {
+    console.log("Hi There!");
+  }
+```
 
 You will see how your application evolves, what techniques are required, and how everything connects in the end. You will get a complete understanding of the programming process.
 

@@ -1,7 +1,7 @@
 
 import { join } from "path";
 import { Blog } from "@interfaces/Blog";
-import { getDir, getFileNames, getItemInPath, getAllItems, markdownToHtml } from "./md";
+import { getDir, getFileNames, getItemInPath, getAllItems } from "./md";
 
 const BLOG_DIR = getDir("/content/blogs");
 
@@ -26,7 +26,6 @@ const getBlogBySlug = (slug: string) => {
 
 const getBlogBySlugWithMarkdown = async (slug: string): Promise<Blog> => {
   const blog = getBlogBySlug(slug);
-  blog.content = await markdownToHtml(blog.content);
   return blog;
 }
 

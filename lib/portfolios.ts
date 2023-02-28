@@ -1,6 +1,6 @@
 import { join } from "path";
 import { Portfolio } from "@interfaces/Portfolio";
-import { getAllItems, getDir, getFileNames, getItemInPath, markdownToHtml } from "./md";
+import { getAllItems, getDir, getFileNames, getItemInPath } from "./md";
 
 const PORTFOLIO_DIR = getDir("/content/portfolios");
 
@@ -30,7 +30,6 @@ const getPortfolioBySlug = (slug: string) => {
 
 const getPortfolioBySlugWithMarkdown = async (slug: string): Promise<Portfolio> => {
   const portfolio = getPortfolioBySlug(slug);
-  portfolio.content = await markdownToHtml(portfolio.content);
   return portfolio;
 }
 

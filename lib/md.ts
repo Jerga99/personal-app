@@ -30,15 +30,6 @@ const getAllItems = (
   return items;
 }
 
-const markdownToHtml = async (markdown: string) => {
-  const result = await remark()
-    .use(html)
-    .use(remarkGfm)
-    .process(markdown);
-
-  return result.toString();
-}
-
 const saveSearchData = (content: MarkdownContent) => {
   const searchFile = getDir("/content/search/index.json");
   const searchItemList: SearchContent[] = [];
@@ -66,6 +57,5 @@ export {
   getFileNames,
   getItemInPath,
   getAllItems,
-  markdownToHtml,
   saveSearchData
 }
